@@ -55,7 +55,7 @@ lvim.builtin.which_key.mappings["t"] = {
 --   }
 -- }
 -- 
--- 
+ 
 -- -- Additional Plugins
 lvim.plugins = {
     {"lunarvim/colorschemes"},
@@ -93,13 +93,6 @@ lvim.plugins = {
 },
 {
   "p00f/nvim-ts-rainbow",
-},
-{
-  "ray-x/lsp_signature.nvim",
-  event = "InsertEnter",
-  config = function()
-    require "lsp_signature".setup()
-  end
 },
 {
   "simrat39/symbols-outline.nvim",
