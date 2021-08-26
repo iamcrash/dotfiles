@@ -1,7 +1,7 @@
-  # unset DOCKER_TLS_VERIFY
-  # unset DOCKER_CERT_PATH
-  # unset DOCKER_MACHINE_NAME
-  # unset DOCKER_HOST
+ # unset DOCKER_TLS_VERIFY
+ # unset DOCKER_CERT_PATH
+ # unset DOCKER_MACHINE_NAME
+ # unset DOCKER_HOST
   
 # Clean containers
 # alias docclean="docker rm -f $(docker ps -a -q)"
