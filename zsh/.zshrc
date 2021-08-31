@@ -1,23 +1,23 @@
-if [-z ${XDG_CONFIG_HOME}]; then
+if [-z "${XDG_CONFIG_HOME}"]; then
   export XDG_CONFIG_HOME=$HOME/.config
 fi
 
-if [-z ${XDG_CACHE_HOME}]; then
+if [-z "${XDG_CACHE_HOME}"]; then
   # defines the base directory relative to which user-specific configuration files should be stored
   export XDG_CACHE_HOME=$HOME/.cache
 fi
 
-if [-z ${XDG_DATA_HOME}]; then
+if [-z "${XDG_DATA_HOME}"]; then
   # single base directory relative to which user-specific data files should be written
   export XDG_DATA_HOME=$HOME/.local/share
 fi
 
-if [-z ${XDG_STATE_HOME}]; then
+if [-z "${XDG_STATE_HOME}"]; then
   # defines the base directory relative to which user-specific state files should be stored
   export XDG_STATE_HOME=$HOME/.state
 fi
 
-if [-z ${XDG_RUNTIME_HOME}]; then
+if [-z "${XDG_RUNTIME_HOME}"]; then
   # defines the base directory relative to which user-specific non-essential runtime files and other file objects (such as sockets, named pipes, ...) should be stored.
   export XDG_RUNTIME_DIR=/run/user/$UID
 fi
