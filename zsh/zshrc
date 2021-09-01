@@ -177,7 +177,8 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 } 
-# If fzf.zsh, load
+
+# Load fzf 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ###
