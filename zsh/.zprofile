@@ -1,4 +1,3 @@
-
 # if [ -z "${XDG_CONFIG_HOME}" ]; then
 #   export XDG_CONFIG_HOME=~/.config
 # fi
@@ -67,6 +66,14 @@ export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+mkdir -p \
+  XDG_CONFIG_HOME \
+  XDG_CACHE_HOME \
+  XDG_DATA_HOME \
+  XDG_RUNTIME_DIR \
+  XDG_STATE_HOME \
+  ZSH_CUSTOM
 
 # Set PATH
 export PATH=$LOCAL_BIN:$PATH
