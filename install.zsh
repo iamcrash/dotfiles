@@ -6,7 +6,7 @@ cd ~/.config
 
 DOTFILESDIR=~/.config/dotfiles
 
-git clone --branch dev-advanced https://github.com/iamcrash/dotfiles
+git clone --branch dev-advanced https://github.com/iamcrash/dotfiles.git
 
 # if [ -d "${DOTFILESDIR}" ] 
 # then
