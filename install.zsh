@@ -16,6 +16,8 @@ git clone --branch dev-advanced https://github.com/iamcrash/dotfiles.git
 #     git clone --branch dev-advanced https://github.com/iamcrash/dotfiles
 # fi
 
+cd dotfiles
+
 rsync -avh \
   --no-perms \
   --exclude "old/" \
@@ -23,9 +25,9 @@ rsync -avh \
   --exclude ".git/" \
   . ..
 
-cd .. \
+cd $XDG_CONFIG_HOME
 
-source zsh/.zprofile \
+source $ZDOTDIR/.zprofile
 
 env
 
