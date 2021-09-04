@@ -1,6 +1,5 @@
-# /usr/bin/zsh
-
-mkdir -p ~/.config \
+cd $HOME \
+&& mkdir -p ~/.config \
 && cd ~/.config \
 && git clone --branch dev-advanced https://github.com/iamcrash/dotfiles \
 && cd dotfiles \
@@ -11,6 +10,7 @@ mkdir -p ~/.config \
   --exclude ".git/" \
   . .. \
 && cd .. \
-&& source zsh/.zprofile
+&& source zsh/.zprofile \
+&& env > test.env
 
-ZSH=${ZSH} curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh || true
+# ZSH=${ZSH} curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh || true
