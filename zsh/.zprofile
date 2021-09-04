@@ -23,6 +23,7 @@
 # fi
 # 
 
+
 # Path to your oh-my-zsh installation.
 export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 
@@ -54,9 +55,6 @@ else
   export EDITOR='lvim'
 fi
 
-# If you come from bash you might have to change your $PATH.
-export LOCAL_BIN=~/.local/bin
-
 # Load Rust cargo
 [[ ! -f $HOME/.cargo/env ]] || source $HOME/.cargo/env
 
@@ -67,13 +65,6 @@ export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-mkdir -p \
-  XDG_CONFIG_HOME \
-  XDG_CACHE_HOME \
-  XDG_DATA_HOME \
-  XDG_RUNTIME_DIR \
-  XDG_STATE_HOME \
-  ZSH_CUSTOM
+export PATH=$XDG_BIN_HOME:$PATH
 
-# Set PATH
-export PATH=$LOCAL_BIN:$PATH
+IS_ZPROFILE=true
