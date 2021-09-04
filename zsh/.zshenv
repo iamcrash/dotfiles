@@ -9,6 +9,7 @@ export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
 export XDG_RUNTIME_DIR=~/.xdg
 export XDG_STATE_HOME=~/.local/state
+export XDG_LOCAL_BIN=~/.local/bin
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export XDG_DESKTOP_DIR=~/Desktop
@@ -22,3 +23,5 @@ fi
 export SHELL_SESSIONS_DISABLE=1
 
 [[ -d ~/.config/dotfiles ]] && export DOTFILES=~/.config/dotfiles
+
+export XDG_DIRS=($ZDOTDIR $XDG_CACHE_HOME $XDG_CONFIG_HOME $XDG_DATA_HOME $XDG_LOCAL_BIN $XDG_RUNTIME_DIR $XDG_STATE_HOME)
