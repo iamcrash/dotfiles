@@ -3,6 +3,7 @@ mkdir -p ~/.config
 XDG_CONFIG_HOME=~/.config
 DOTFILESDIR=~/.config/dotfiles
 GITURL=https://github.com/iamcrash/dotfiles.git
+ZDOTDIR=~/.config/zsh
 
 cd $XDG_CONFIG_HOME
 
