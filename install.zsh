@@ -1,7 +1,4 @@
-cd $HOME \
-&& mkdir -p ~/.config \
-&& cd ~/.config \
-&& git clone --branch dev-advanced https://github.com/iamcrash/dotfiles \
+git pull --branch dev-advanced https://github.com/iamcrash/dotfiles \
 && cd dotfiles \
 && rsync -avh \
   --no-perms \
