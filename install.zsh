@@ -3,7 +3,6 @@ mkdir -p ~/.config
 XDG_CONFIG_HOME=~/.config
 DOTFILESDIR=~/.config/dotfiles
 GITURL=https://github.com/iamcrash/dotfiles.git
-ZDOTDIR=~/.config/zsh
 
 cd $XDG_CONFIG_HOME
 
@@ -26,7 +25,8 @@ rsync -avh \
   --exclude ".git/" \
   . ..
 
-source $ZDOTDIR/.zprofile
+ZDOTDIR=~/.config/zsh
+source ~/.config/zsh/.zprofile
 
 env > test.env
 
