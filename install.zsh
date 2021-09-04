@@ -1,12 +1,12 @@
 mkdir -p ~/.config
 
-env
-
-cd ~/.config
-
+XDG_CONFIG_HOME=~/.config
 DOTFILESDIR=~/.config/dotfiles
+GITURL=https://github.com/iamcrash/dotfiles.git
 
-git clone --branch dev-advanced https://github.com/iamcrash/dotfiles.git
+cd $XDG_CONFIG_HOME
+
+git clone --branch dev-advanced $GITURL
 
 # if [ -d "${DOTFILESDIR}" ] 
 # then
@@ -16,7 +16,7 @@ git clone --branch dev-advanced https://github.com/iamcrash/dotfiles.git
 #     git clone --branch dev-advanced https://github.com/iamcrash/dotfiles
 # fi
 
-cd dotfiles
+cd $DOTFILESDIR
 
 rsync -avh \
   --no-perms \
@@ -25,10 +25,8 @@ rsync -avh \
   --exclude ".git/" \
   . ..
 
-cd $XDG_CONFIG_HOME
-
 source $ZDOTDIR/.zprofile
 
-env
+env > test.env
 
 # ZSH=${ZSH} curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh || true
